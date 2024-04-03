@@ -1,0 +1,78 @@
+Q.1) create your own resume data in JSON format
+
+
+const resumeData = {
+  "personalInformation": {
+    "firstName": "Kavindra",
+    "lastName": "Kumar",
+    "email": "kksonu97@gmail.com",
+    "phone": "7906128071",
+    "address": "229/26-D Mandawali Delhi 110092",
+    "linkedin": "https://www.linkedin.com/in/kavindrakumar",
+    "github": "https://github.com/Kavindrak"
+  },
+  "summary": "A self-motivated and focused Mechanical
+Engineering graduate with a specialization
+in designing & web development seeking for
+an opportunity to work in a challenging
+environment.",
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Mechanical",
+      "institution": "F.I.E.T.",
+      "location": "Bareilly, U.P.",
+      "graduationYear": 2020
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Tech Solutions Inc.",
+      "location": "City, State",
+      "startDate": "2016-01-01",
+      "endDate": "2022-12-31",
+      "description": "Led a team of developers in designing and implementing a new microservices architecture for a large-scale web application. Collaborated with product managers to define project requirements and prioritize tasks. Mentored junior engineers and conducted code reviews to maintain code quality."
+    },
+    {
+      "title": "Accounts Receivable",
+      "company": "Porteck India Info services Private Limited",
+      "location": "Noida, U.P.",
+      "startDate": "March, 2022",
+      "endDate": "Present",
+      "description": "To work on the software and know about the status of the
+claims which are denied by the insurance companies."
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Node.js",
+    "React",
+    "MongoDB",
+    "HTML",
+    "CSS",
+    "Git"
+  ]
+};
+
+Q.2) For the above JSON, iterate over all for loops (for, for in, for of, forEach)
+
+
+// Using 'for...in' loop
+console.log("\nUsing 'for...in' loop:");
+for (let key in resumeData) {
+  if (resumeData.hasOwnProperty(key)) {
+    console.log(key, ":", resumeData[key]);
+  }
+}
+
+// Using 'for...of' loop for arrays
+console.log("\nUsing 'for...of' loop for arrays:");
+for (let experience of resumeData.experience) {
+  console.log("Experience:", experience);
+}
+
+// Using 'forEach' for arrays
+console.log("\nUsing 'forEach' for arrays:");
+resumeData.skills.forEach(skill => {
+  console.log("Skill:", skill);
+});
